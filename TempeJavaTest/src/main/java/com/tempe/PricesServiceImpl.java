@@ -10,12 +10,11 @@ import org.springframework.stereotype.Service;
 public class PricesServiceImpl implements PricesService{
 
 	@Autowired
-	 private PricesRepository pricesRepository;
+	private PricesRepository pricesRepository;
 
 	@Override
 	public Prices getPrices(Long brandId, Long productId, String currentDate) {
-		List<Prices> prices = pricesRepository.findAllByBrandIdAndProductIdAndCurrentDate(brandId, productId,currentDate);
-		System.out.println("brandId: " + brandId+" productId: "+productId+" currentDate: "+currentDate);
+		List<Prices> prices = pricesRepository.findAllByBrandIdAndProductIdAndCurrentDate(brandId, productId,currentDate);		
 		return prices.get(0);
 	}
 }

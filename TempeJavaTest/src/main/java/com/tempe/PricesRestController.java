@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class PricesRestController {
 	
 	@Autowired
-	 private PricesService pricesService;
+	private PricesService pricesService;
 	
 	@RequestMapping("/api/prices/{brandId}/products/{productId}/date/{currentDate}")
-	 public Prices getPrices(@PathVariable(name="brandId")Long brandId, 
-			 				 @PathVariable(name="productId")Long productId,
-	 					     @PathVariable(name="currentDate")String currentDate)
+	public Prices getPrices(@PathVariable(name="brandId")Long brandId, 
+			 				@PathVariable(name="productId")Long productId,
+	 					    @PathVariable(name="currentDate")String currentDate)
 	{
 		return pricesService.getPrices(brandId,productId,currentDate);
-	 }
+	}
 }

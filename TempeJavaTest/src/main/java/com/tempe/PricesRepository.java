@@ -12,5 +12,7 @@ public interface PricesRepository extends JpaRepository<Prices,Long>{
 	
 	@Query("select p from Prices p where brand_Id = :brandId and product_id = :productId AND :currentDate BETWEEN START_DATE AND END_DATE ORDER BY PRIORITY DESC")
 	public List<Prices> findAllByBrandIdAndProductIdAndCurrentDate(
-	      @Param("brandId") Long brandId, @Param("productId") Long productId,@Param("currentDate") String currentDate);
+	      @Param("brandId") Long brandId, 
+	      @Param("productId") Long productId,
+	      @Param("currentDate") String currentDate);
 }

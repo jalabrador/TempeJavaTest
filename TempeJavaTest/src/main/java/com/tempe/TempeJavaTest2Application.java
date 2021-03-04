@@ -9,5 +9,4 @@ public class TempeJavaTest2Application {
 	public static void main(String[] args) {
 		SpringApplication.run(TempeJavaTest2Application.class, args);
 	}
-
 }
